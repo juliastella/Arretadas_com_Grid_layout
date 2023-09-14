@@ -285,7 +285,21 @@ img {
   grid-area: footer;
 }
 
-
+@media (max-width: 760px) {
+  .locais-container{
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .locais-info h1, p{
+    text-align: center;
+    word-wrap: break-word;
+  }
+  .locais-info-text {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
 
 /* Media */
 
