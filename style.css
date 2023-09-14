@@ -93,6 +93,10 @@ img {
   font-weight: bold;
 }
 
+.header-info p{
+  font-size: 1em;
+}
+
 .header-info button{
   margin-top: 30px;
   width: 6.25em;
@@ -110,6 +114,28 @@ img {
   color: aliceblue;
   cursor: pointer;
   transition: 0.1s;
+}
+
+@media (max-width: 760px) {
+  .header-menu{
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  .header-info{
+    align-content: center;
+    align-items: center;
+  }
+  .header-info p{
+    text-align: center;
+    font-size: 0.8em;
+    word-wrap: break-word;
+  }
+  .header-menu button{
+    width: 5.25rem;
+    height: 5.25rem;
+  }
+
 }
 
 /* main */
@@ -271,15 +297,39 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
-}
-
-.midia-container {
   grid-template-areas:
     "denuncia denuncia saiba-mais"
     "depoimentos importacia conhecendo"
     "piscologia canal conhecendo";
 }
 
+
+@media (max-width: 1200px) {
+  .midia-container{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "denuncia saiba-mais"
+    "importacia conhecendo"
+    "depoimentos conhecendo"
+    "piscologia canal";
+  }
+}
+
+@media (max-width: 760px) {
+  .midia-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+    "denuncia"
+    "saiba-mais"
+    "importacia"
+    "conhecendo"
+    "depoimentos"
+    "piscologia"
+    "canal";
+  }
+}
 
 /* midia itens */
 
