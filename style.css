@@ -73,7 +73,7 @@ img {
 .header-nav a{
   font-size: 1.125em;
   display: inline;
-  padding: 20px;
+  padding: 0.9375rem;
   transition: 0.1s;
 }
 
@@ -98,7 +98,7 @@ img {
 }
 
 .header-info button{
-  margin-top: 30px;
+  margin-top: 1.875rem;
   width: 6.25em;
   height: 2.25em;
   background: aliceblue;
@@ -120,8 +120,20 @@ img {
   .header-menu{
     flex-flow: column wrap;
     align-items: center;
-    gap: 2rem;
+    gap: 2.7rem;
   }
+
+  .header-nav a{
+    font-size: 1em;
+    display: inline;
+    padding: 0.8375rem;
+  
+  }
+  .header-nav a:hover{
+    background: #167358;
+    border: #167358;
+  }
+  
   .header-info{
     align-content: center;
     align-items: center;
@@ -135,7 +147,24 @@ img {
     width: 5.25rem;
     height: 5.25rem;
   }
+}
 
+@media (max-width: 480px) {
+  .header-info h1{
+    font-size: 1.6rem;
+  }
+  .header-info p{
+    font-size: 0.7em;
+  }
+  .header-info button{
+    width: 6.25rem;
+    height: 2.25rem;
+    font-size: 1rem;
+  }
+  .header-info button:hover{
+    background: #167358;
+    border: #167358;
+  }
 }
 
 /* main */
@@ -223,6 +252,7 @@ img {
   font-weight: bold;
   transition: 0.1s;
 }
+
 
 .locais-info-text button:hover{
   background: transparent;
@@ -314,8 +344,11 @@ img {
   .locais-info-text{
     align-items: center;
   }
-  .locais-info-text button{
-    margin: 2.25rem 0rem;
+
+  .locais-info-text button:hover{
+    background: #FFFFFF;
+    color: #222222;
+    border: #FFFFFF;
   }
 }
 
@@ -587,7 +620,7 @@ img {
   display: grid;
   grid-template-rows: 1fr 0.3fr;
   place-items: center center;
-  padding: 0px 20px;
+  padding: 0rem 1.25rem;
 }
 
 .conhecendo-galeria{
@@ -598,13 +631,13 @@ img {
 
 .conhecendo-galeria{
   background: #8166B0;
-  padding: 35px 100px;
+  padding: 2.1875rem 6.25rem;
   border-radius: 50%;
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 
 .conhecendo-galeria img{
-  height: 250px;
+  height: 15.625rem;
 }
 
 .conhecendo-galeria h3{
@@ -826,6 +859,30 @@ img {
   .depoimentos-text{
     align-self: baseline;
   }
+}
+
+  @media (max-width: 480px) {
+    .importacia-text h3{
+      text-align: start;
+    }
+    .conhecendo{
+      gap: 1rem;
+    }
+    .conhecendo-galeria{
+      background: #8166B0;
+      padding: 2rem 5.25rem;
+    }
+    .conhecendo-galeria img{
+      height: 8rem;
+      width: 8rem;
+    }
+    .conhecendo-galeria h3{
+      margin-top: 1.5rem;
+      margin-bottom: 1.3rem;
+    }
+    .canal-galeria img{
+      height: 10.5rem;
+    }
 }
 
 
