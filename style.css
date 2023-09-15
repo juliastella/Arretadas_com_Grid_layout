@@ -201,15 +201,21 @@ img {
   font-weight: bold;
 }
 
+.locais-info-text{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+}
+
 .locais-info-text p{
   padding: 20px 20px 0px 20px;
   font-size: 1.125em;
 }
 
 .locais-info-text button{
-  margin: 30px 0px 0px 20px;
-  width: 6.25em;
-  height: 2.25em;
+  margin: 1.875rem 0rem 0rem 1.25rem;
+  width: 6.25rem;
+  height: 2.25rem;
   background: #F28B30;
   color: aliceblue;
   border: none;
@@ -290,16 +296,48 @@ img {
     grid-template-columns: none;
     grid-template-rows: repeat(2, 1fr);
   }
+  .locais-galeria{
+    grid-template-columns: repeat(2, auto);
+	  grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "logo nav"
+      " content nav"
+      "sidenav advert"
+      "sidenav advert"
+      "footer footer";
+  }
   .locais-info h1, p{
     text-align: center;
     word-wrap: break-word;
   }
-  .locais-info-text {
-    display: flex;
-    flex-flow: column wrap;
+
+  .locais-info-text{
     align-items: center;
   }
+  .locais-info-text button{
+    margin: 2.25rem 0rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .locais-container{
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  .locais-galeria{
+    grid-template-columns: repeat(1, auto);
+	  grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "logo"
+      "nav"
+      "content"
+      "advert"
+      "sidenav"
+      "footer";
+  }
+}
+
 
 /* Media */
 
@@ -398,6 +436,7 @@ img {
 }
 
 /* depoimentos */
+
 .depoimentos {
   grid-area: depoimentos;
   background: #EF5637;
@@ -416,6 +455,7 @@ img {
 }
 
 /* depoimentos texto */
+
 .depoimentos-text{
   text-align: center;
 }
